@@ -92,17 +92,20 @@ public class GameState extends BasicGameState {
 	}
 	
 	public void render(GameContainer arg0, StateBasedGame arg1, Graphics g) throws SlickException {
+		//set the mouseball to yellow
 		g.setColor(Color.yellow);
 		g.fill(mouseBall);
-		
+		//set the bombs to red
 		g.setColor(Color.red);
 		for(Circle c: bombs){
 			g.fill(c);
 		}
+		//set the balls to blue
 		g.setColor(Color.cyan);
 		for(Circle c: balls){
 			g.fill(c);
 		}
+		//draw the score and lives to the screen
 		g.drawString("Score:" + points, 20, 50);
 		g.drawString("Lives:" + life, 20, 70);
 	}
